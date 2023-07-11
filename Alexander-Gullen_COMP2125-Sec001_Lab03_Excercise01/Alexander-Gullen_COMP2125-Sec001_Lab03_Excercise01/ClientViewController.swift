@@ -9,6 +9,13 @@ import UIKit
 
 class ClientViewController: UIViewController {
 
+    @IBOutlet weak var txb_project_name: UITextField!
+    @IBOutlet weak var txb_duration_in_months: UITextField!
+    @IBOutlet weak var txb_location: UITextField!
+    
+    
+    @IBOutlet weak var lbl_output: UILabel!
+    
     @IBOutlet weak var onBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +23,9 @@ class ClientViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onSubmitClick(_ sender: Any) {
+        lbl_output.text = " user: \(txb_project_name!) \n project: \(txb_project_name.text!)"
+    }
     /*
     // MARK: - Navigation
 

@@ -39,7 +39,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KA8-Uj-nOo"/>
-                                    <segue destination="ebT-jc-Mz7" kind="presentation" identifier="segueToClientView" id="UAf-Fk-lQq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" restorationIdentifier="loginPassword" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="passport goes here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-hw-vxa">
@@ -56,6 +55,7 @@
                     <connections>
                         <outlet property="txb_loginPassword" destination="dGp-hw-vxa" id="WEN-6b-tun"/>
                         <outlet property="txb_loginUsername" destination="rtE-HC-uiI" id="ymU-Cg-Rd1"/>
+                        <segue destination="ebT-jc-Mz7" kind="presentation" identifier="segueToClientView" id="kq0-d9-ftZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,6 +100,9 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitClick:" destination="ebT-jc-Mz7" eventType="touchUpInside" id="m5T-GT-HWV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDB-6J-3fR">
                                 <rect key="frame" x="16" y="478" width="361" height="124"/>
@@ -126,6 +129,12 @@
                         <color key="backgroundColor" systemColor="linkColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="kjF-lv-1aD"/>
+                    <connections>
+                        <outlet property="lbl_output" destination="MDB-6J-3fR" id="99x-Jc-U5b"/>
+                        <outlet property="txb_duration_in_months" destination="yiW-4M-YUz" id="GW0-ao-3uS"/>
+                        <outlet property="txb_location" destination="MFB-cZ-7nN" id="KEO-Jl-WqH"/>
+                        <outlet property="txb_project_name" destination="CS8-Uu-E0W" id="cNb-Od-3J8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLj-g8-gm0" sceneMemberID="firstResponder"/>
             </objects>
