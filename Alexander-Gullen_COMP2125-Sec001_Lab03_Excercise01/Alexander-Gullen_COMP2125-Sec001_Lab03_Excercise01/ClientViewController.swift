@@ -9,12 +9,19 @@ import UIKit
 
 class ClientViewController: UIViewController {
 
+    // create a variable that will store the value
+    var username: String = "anonymous";
     
     @IBOutlet weak var txbProjectName: UITextField!
+    @IBOutlet weak var txbProjectDuration: UITextField!
+    @IBOutlet weak var txbProjectLocation: UITextField!
     @IBOutlet weak var btnBack: UIButton!
     
     
     @IBAction func btnBackOnClick(_ sender: Any) {
+        //clear the username and performe the segue
+        username = "anonymous";
+        
         performSegue(withIdentifier: "segueBack", sender: self)
     }
     override func viewDidLoad() {
@@ -22,9 +29,14 @@ class ClientViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func onSubmitClick(_ sender: Any) {
+    @IBAction func btnSubmitClick(_ sender: Any) {
         //lbl_output.text = " user: \(txb_project_name!) \n project: \(txb_project_name.text!)"
+        if txbProjectName.text != ""{
+            print("Project name: ", txbProjectName.text!, "\nUsername: ", username);
+        }else{
+            print("no Project name entered, pls enter a project name")
+        }
+        
     }
     /*
     // MARK: - Navigation

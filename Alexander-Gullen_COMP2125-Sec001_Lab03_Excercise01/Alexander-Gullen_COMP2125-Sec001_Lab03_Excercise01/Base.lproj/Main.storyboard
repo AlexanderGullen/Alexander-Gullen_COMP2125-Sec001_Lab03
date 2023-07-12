@@ -72,10 +72,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onn-YC-Pxz">
-                                <rect key="frame" x="16" y="664" width="75" height="35"/>
+                                <rect key="frame" x="23" y="664" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                 <connections>
                                     <action selector="btnBackOnClick:" destination="wqv-mU-OxD" eventType="touchDown" id="0eD-hT-PAj"/>
                                 </connections>
@@ -86,6 +86,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Duration In Months" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGd-12-XXB">
+                                <rect key="frame" x="16" y="101" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfR-Ma-7Ud">
+                                <rect key="frame" x="16" y="143" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlr-mJ-cgv">
+                                <rect key="frame" x="301" y="446" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="btnSubmitClick:" destination="wqv-mU-OxD" eventType="touchUpInside" id="ea9-sf-UCR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IgH-h3-Bh3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,6 +114,8 @@
                     <navigationItem key="navigationItem" id="Ia5-BW-C62"/>
                     <connections>
                         <outlet property="btnBack" destination="Onn-YC-Pxz" id="fQc-gX-ltF"/>
+                        <outlet property="txbProjectDuration" destination="pGd-12-XXB" id="XD4-E5-MWL"/>
+                        <outlet property="txbProjectLocation" destination="cfR-Ma-7Ud" id="ESk-BA-xm3"/>
                         <outlet property="txbProjectName" destination="zGA-On-eXy" id="sV4-Zm-1WK"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueBack" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8ma-8n-YQ6"/>
                     </connections>
