@@ -12,6 +12,7 @@ class ClientViewController: UIViewController {
     // create a variable that will store the value
     var username: String = "anonymous";
     
+    @IBOutlet weak var txaOutputBox: UITextView!
     @IBOutlet weak var txbProjectName: UITextField!
     @IBOutlet weak var txbProjectDuration: UITextField!
     @IBOutlet weak var txbProjectLocation: UITextField!
@@ -31,10 +32,10 @@ class ClientViewController: UIViewController {
     }
     @IBAction func btnSubmitClick(_ sender: Any) {
         //lbl_output.text = " user: \(txb_project_name!) \n project: \(txb_project_name.text!)"
-        if txbProjectName.text != ""{
-            print("Project name: ", txbProjectName.text!, "\nUsername: ", username);
+        if txbProjectName.text != "" && txbProjectDuration.text != "" && txbProjectLocation.text != "" {
+            txaOutputBox.text = String("Project name: " + txbProjectName.text! + "\nUsername: " + username);
         }else{
-            print("no Project name entered, pls enter a project name")
+            txaOutputBox.text = "information in the form was found to be invalid, make sure all three forms are filled out";
         }
         
     }
