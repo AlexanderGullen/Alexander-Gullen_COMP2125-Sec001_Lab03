@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Alexander_Gullen_COMP2125_Sec001_Lab03_Excercise01" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="segueToClientView" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Alexander_Gullen_COMP2125_Sec001_Lab03_Excercise01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginController">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
                     <connections>
                         <outlet property="txb_loginPassword" destination="dGp-hw-vxa" id="WEN-6b-tun"/>
                         <outlet property="txb_loginUsername" destination="rtE-HC-uiI" id="ymU-Cg-Rd1"/>
-                        <segue destination="ebT-jc-Mz7" kind="presentation" identifier="segueToClientView" id="kq0-d9-ftZ"/>
+                        <segue destination="wqv-mU-OxD" kind="show" identifier="segueToClientView" id="8nM-jU-YeK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,67 +63,50 @@
             <point key="canvasLocation" x="-240.45801526717557" y="-53.521126760563384"/>
         </scene>
         <!--Client View Controller-->
-        <scene sceneID="M56-nr-c62">
+        <scene sceneID="GMz-U5-uPe">
             <objects>
-                <viewController id="ebT-jc-Mz7" customClass="ClientViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vuk-nY-6Ua">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KcD-DF-YL1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="wqv-mU-OxD" customClass="ClientViewController" customModule="Alexander_Gullen_COMP2125_Sec001_Lab03_Excercise01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="enV-kj-QHt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGi-dt-CXj">
-                                <rect key="frame" x="16" y="618" width="82" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onn-YC-Pxz">
+                                <rect key="frame" x="16" y="664" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="SegueBack" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="qQQ-0I-nPZ"/>
+                                    <action selector="btnBackOnClick:" destination="wqv-mU-OxD" eventType="touchDown" id="0eD-hT-PAj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Client Info Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6I-rS-jRO">
-                                <rect key="frame" x="16" y="59" width="361" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6w-RM-5OW">
-                                <rect key="frame" x="295" y="425" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
-                                <connections>
-                                    <action selector="onSubmitClick:" destination="ebT-jc-Mz7" eventType="touchUpInside" id="m5T-GT-HWV"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" restorationIdentifier="ClientProjectName" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r59-i3-2WG">
-                                <rect key="frame" x="16" y="107" width="361" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGA-On-eXy">
+                                <rect key="frame" x="16" y="59" width="361" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="so6-XU-xue"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <viewLayoutGuide key="safeArea" id="IgH-h3-Bh3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kjF-lv-1aD"/>
+                    <navigationItem key="navigationItem" id="Ia5-BW-C62"/>
                     <connections>
-                        <outlet property="txbProgramName" destination="r59-i3-2WG" id="HzR-Fb-dKa"/>
+                        <outlet property="btnBack" destination="Onn-YC-Pxz" id="fQc-gX-ltF"/>
+                        <outlet property="txbProjectName" destination="zGA-On-eXy" id="sV4-Zm-1WK"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueBack" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8ma-8n-YQ6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yLj-g8-gm0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606.87022900763361" y="-54.225352112676056"/>
+            <point key="canvasLocation" x="571.75572519083971" y="-54.225352112676056"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -10,9 +10,13 @@ import UIKit
 class ClientViewController: UIViewController {
 
     
-    @IBOutlet weak var txbProgramName: UITextField!
+    @IBOutlet weak var txbProjectName: UITextField!
+    @IBOutlet weak var btnBack: UIButton!
     
     
+    @IBAction func btnBackOnClick(_ sender: Any) {
+        performSegue(withIdentifier: "segueBack", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
